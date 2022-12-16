@@ -1,0 +1,45 @@
+!  Express.js is a web app framework that provides you with a simple API to build websites
+? web apps and backend. It facilitates the rapid development of Node based web applications.
+? Following are some of the core features of Express Framework-
+
+** Allows to set up middlewares to respond to HTTP request.
+** Defines a routing table which is used to perform different actions based on HTTP method and URL.
+** Allows to dynamically render HTML pages based on passing arguments to templates.
+
+! Another simple definiton- 
+** Express.js is a Node.js web application server framework, which is specially designed for building single-page,
+**multi-page and hybrid web app.
+
+
+//! syntax =app.get(root , callback)
+app.get("/" , (req, res) =>{
+
+})
+
+? The callback function has 2 parameters , request(req) and response(res). The request object(req) represents the HTTP request 
+? and has properties for the request query string, parameters , body, HTTP headers, etc.
+
+** Similarly,the response object represents the HTTP response that the express app sends when it receives an HTTP request.
+
+! What are Routes?
+*Routing determine the way in which an application responds to a client request to a particular endpoint.
+*For example, a client can make a GET, POST, PUT or DELETE http request for various URL such as the ones shown below;
+
+http://localhost:3000/Books
+http://localhost:3000/Students
+
+! Each route can have one or more handler functions, which are executed when the route is matched
+
+? General syntax= app.METHOD(PATH, HANDLER)
+
+wherein,
+
+1) app is an instance of the express module
+
+2) METHOD is an HTTP request method (GET, POST, PUT or DELETE)
+
+3) PATH is a path on the server.
+
+4) HANDLER is the function executed when the route is matched.
+
+** out of the context**

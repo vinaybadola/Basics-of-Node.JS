@@ -1,0 +1,35 @@
+.container {
+    margin: auto;
+    width: 60%;
+
+    padding: 10px;
+    padding-top: 250px;
+  }
+  .css {
+    padding-top: 20px;
+  }
+  .author {
+padding: auto;
+font-size: 20px;
+  }
+  .btn btn-success {
+width: 100%;
+font-size: 18px;
+text-transform: capitalize;
+color: #fff;
+}
+.start-quote {
+opacity: 0.2;
+font-size: 50px;
+}
+.quotes {
+font-family: "Courier New", Courier, monospace;
+font-size: 25px;
+opacity: 0.8;
+}
+.twitter{
+  cursor: pointer;
+}
+
+
+  

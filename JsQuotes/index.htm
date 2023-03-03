@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Quote website</title>
+    
+  </head>
+  <body>
+    <h2 style="text-align: center">
+      <u> This is a dynamic Quote website with one click to tweet</u>
+    </h2>
+    <h5 class="css" style="text-align: center">
+      CLick on the twitter icon for tweet
+    </h5>
+    <div class="container">
+      <div class="inner">
+        <div class="box">
+          <p class="number">
+            <img
+              class="twitter" 
+              src="https://i.postimg.cc/k5y7GTc5/124021.png"
+              width="100px"
+              alt="twitter"
+              title="tweetHere"
+              id="tweet"
+            />
+          </p>
+          <div class="text">
+            <i class="start-quote fas fa-quote-left"></i>
+            <p id="quotes" class="quotes"></p>
+            <p id="author" class="author"></p>
+          </div>
+
+          <button type="button" class="btn btn-success" id="newQuotes">
+            New Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const quotes = document.getElementById("quotes");
+      const author = document.getElementById("author");
+      const newQuotes = document.getElementById("newQuotes");
+      const tweet = document.getElementById("tweet");
+
+      let realData = "";
+      let quotesdata = "";
+
+      const tweetNow = () => {
+        let tweetPost = `https://twitter.com/intent/tweet?text=${quotesdata.text} ${quotesdata.author}`;
+        window.open(tweetPost);
+      };
+
+      const getNewQuotes = () => {
+        let rnum = Math.floor(Math.random() * 20);
+        quotesdata = realData[rnum];
+        quotes.innerText = `${quotesdata.text}`;
+        author.innerText = `${quotesdata.author}`;
+        quotesdata.author == null
+          ? (author.innerText = "unknown")
+          : (author.innerText = `${quotesdata.author}`);
+      };
+      const getQuotes = async () => {
+        const api = "https://type.fit/api/quotes";
+        try {
+          let data = await fetch(api);
+          realData = await data.json();
+
+          getNewQuotes();
+
+          
+        } catch (error) {}
+      };
+      tweet.addEventListener("click", tweetNow);
+      newQuotes.addEventListener("click", getNewQuotes);
+
+      getQuotes();
+    </script>
+  </body>
+</html>

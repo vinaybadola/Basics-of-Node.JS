@@ -1,0 +1,38 @@
+Q1. Which node module is used to serve static resources in NodeJS?
+*        Ans. Node-static
+
+Q2. Which node module is used to handle binary data?
+*        Ans. Buffer
+
+Q3. Which of the following NodeJS modules is used for file uploads?
+*        Ans. Formidable
+
+Q4. A visual development environment for NodeJS is?
+*        Ans. Node-Red
+
+Q5. What command do we use to list all the node modules that are installed globally?
+*       Ans. npm ls-g
+
+Q6. Which of the following statements are true? 1. NodeJS is multithreaded. 2. The Buffer class is a global class that can be accessed without importing a buffer module.
+*       Ans. Statement 2 is true and statement 1 is false.
+
+Q7. _variable in REPL session of NodeJS is used for?  
+*       Ans.  it is used to get the last result                                                                                                 
+
+Q8. The node object property which is used to return the node just before the current node is?
+*       Ans. previousSibling
+
+Q9.  ____ is a debugging tool for NodeJS?
+*       Ans. Node Inspector
+
+Q10. How many node objects methods are available?
+*       Ans. 18
+
+Q11. Default scope in Node.js application is?
+*       Ans. Local
+
+Q12.  What method is used to return the current working directory of the process?
+*       Ans. cwd()
+
+
+

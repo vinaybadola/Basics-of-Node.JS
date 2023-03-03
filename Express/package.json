@@ -1,15 +1,16 @@
 {
-  "name": "exapp",
+  "name": "express",
   "version": "1.0.0",
-  "description": "Getting started hell yeah excited!:)",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Vinay Badola",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2",
-    "nodemon": "^2.0.15"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
   }
 }
